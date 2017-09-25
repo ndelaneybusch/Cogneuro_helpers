@@ -30,7 +30,7 @@ I try to follow a simple set of guidelines when approaching my workflow.
  - __Make good habits easy.__ Take the time to arrange my workstation so that the things I know I "should" do are easy and salient.
  - __Make it modular.__ I re-use code all the time, because I work with similar datasets that pose similar problems. I also want it to be easy to swap out some process with some other process mid-stream (e.g. switch my outlier detection method).
  - __Make it reproducible.__ Script everything, use version control, make regular backups, keep it organized, write documentation, comment your code, and make all of these habits easy.
- - __Make it accessible.__ Where possible, use free tools, support open-source projects, share data and materials, and host non-paywalled author versions of manuscripts.
+ - __Make it accessible.__ Where possible, use free tools, support open-source projects, and anticipate sharing data and materials in a way that other researchers can actually use.
 
 The following recommendations will focus on Windows programs that are available for free, though I try to emphasize those that also have Linux and Mac versions.  
   
