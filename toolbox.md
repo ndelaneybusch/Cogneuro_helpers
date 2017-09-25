@@ -59,8 +59,8 @@ install.packages("caret")
 install.packages("car")
 install.packages("lmerTest")
 install.packages("itsadug")
-install.packages("rgl")
 install.packages("psych")
+install.packages("rgl")
 {% endhighlight %}
 
 __Descriptions__:
@@ -75,6 +75,12 @@ __Descriptions__:
 - Learn how to use the Foreign package to [import SAS/SPSS/Stata/Minitab/Octave files into R](http://www.statmethods.net/input/importingdata.html). [Readr](http://readr.tidyverse.org) is a great go-to for less exotic file formats, specifically any comma/tab/space delimited file ([chapter](http://r4ds.had.co.nz/data-import.html)).
 - [doBy](https://cran.r-project.org/web/packages/doBy/vignettes/doBy.pdf) is my preferred way to implement group-wise functions.
 - [Hmisc](http://data.vanderbilt.edu/fh/R/Hmisc/examples.nb.html) is a handy set of helper functions that make a wide variety of tasks easier when exploring data ([reference card](http://biostat.mc.vanderbilt.edu/wiki/pub/Main/Hmisc/Hmisc-refcard.pdf)).
+- [caret](http://topepo.github.io/caret/index.html) is my go-to for preparing data for predictive modeling.
+- The Companion to Applied Regression ("car") package has some [great functions for model diagnostics](http://www.statmethods.net/stats/rdiagnostics.html) and is my go-to package for [getting p-values from lme4 models](http://ase.tufts.edu/gsc/gradresources/guidetomixedmodelsinr/mixed%20model%20guide.html) when working with categorical outcomes like accuracy measures.
+- [lmerTest](http://www2.compute.dtu.dk/courses/02930/SummerschoolMaterialWeb/Readingmaterial/MixedModels-TuesdayandFriday/Packageandtutorialmaterial/lmerTestTutorial.pdf) has some good helper functions for lme4 and is my go-to package for getting p-values from lme4 models when working with continuous outcomes like ERP amplitudes.
+- [itsadug](http://www.sfs.uni-tuebingen.de/~jvanrij/Tutorial/GAMM.html) (and the corresponding mgcv package) are my go-to for fitting Generalized Additive Models.
+- [Psych](http://personality-project.org/r/psych/) is a huge package with lots of statistical methods implemented. My go-to for dimension reduction (e.g. bifactor analysis) and item response theory (see [chapter](http://personality-project.org/r/psych/vignettes/overview.pdf)).
+- [rgl](https://cran.r-project.org/web/packages/rgl/vignettes/rgl.html) is my go-to for 3D plotting.
   
 ### RStudio Plugins
 
