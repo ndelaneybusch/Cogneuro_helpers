@@ -100,10 +100,17 @@ I generally prefer [Spyder](https://github.com/spyder-ide/spyder) for my IDE (wh
 ### Python Packages
 Run the following in the cmd to install my recommended packages.
 ```
-conda install scipy curl
+conda install scipy seaborn scikit-learn 
+pip install sklearn-pandas
 ```
 To install packages on the python27 environment that we created, enter "activate python27" (or whatever your named your 2.7 environment) in the cmd, then enter the conda or the pip install instructions.
 
 The vast majority of functionality that I'm using on a daily basis comes from [SciPy](https://scipy.org). These will ship with Anaconda, but it's worth going through each to make sure you understand the functionality.
+
 __Descriptions__:
-- 
+- [Numpy](https://docs.scipy.org/doc/numpy-dev/user/quickstart.html) is a better way to work with matrices (or, more precisely, n-dimensional arrays). If you are coming from MatLab land, [you will feel right at home](https://docs.scipy.org/doc/numpy-dev/user/numpy-for-matlab-users.html).
+- [Pandas](http://pandas.pydata.org/pandas-docs/stable/10min.html) is the way to work with Data Frames in python. If you are coming from R land, [you will feel right at home](http://pandas.pydata.org/pandas-docs/stable/comparison_with_r.html). In fact, you can/should use [rpy2 to interface between the two](http://pandas.pydata.org/pandas-docs/stable/r_interface.html). [Learn the basics here](http://pandas.pydata.org/pandas-docs/stable/basics.html), and [rely on a reference](https://gist.github.com/bsweger/e5817488d161f37dcbd2) as you learn the functionality.
+- [Matplotlib](http://matplotlib.org) is my go-to for python visualizations (with the [seaborn](https://seaborn.pydata.org) extras).
+- [SKlearn](http://scikit-learn.org/stable/) is my go-to for predictive modeling. [Sklearn-pandas](https://github.com/pandas-dev/sklearn-pandas) supports jumping from Pandas data frames to sklearn arrays.
+- For neural network models, I use [TensorFlow](https://www.tensorflow.org) (which now has the weight of Google behind it) with the [CUDA](https://developer.nvidia.com/cuda-zone) backend (Nvidia GPU only) and the [Keras](https://keras.io) frontend. Carefully follow the installation instructions [here](https://www.tensorflow.org/install/install_windows) and then [install the Keras python library](https://keras.io/#installation).
+
