@@ -69,7 +69,7 @@ __Descriptions__:
   - [magrittr](http://magrittr.tidyverse.org) fundamentally changes the way that sequences of commands are applied to data. Rather than nesting functions inside of one another (making big incomprehensible lines of code), you sequence the commands from left to right (like a sentence) and pass the output of one function to the input of the next function using "pipes", denoted by %>%. See chapter [here](http://r4ds.had.co.nz/pipes.html).
   - [tidyr](http://tidyr.tidyverse.org) is an easy way to switch between wide and long data formats.
   - [dplyr](http://dplyr.tidyverse.org) great for selecting/filtering your data and computing new variables. See book chapter [here](http://r4ds.had.co.nz/transform.html#grouped-mutates-and-filters).
-  - There are specialized helper functions for working with [strings](http://stringr.tidyverse.org) ([chapter](http://r4ds.had.co.nz/strings.html)), [dates](http://lubridate.tidyverse.org) ([chapter](http://r4ds.had.co.nz/dates-and-times.html)), and [factors](http://forcats.tidyverse.org) ([chapter](http://r4ds.had.co.nz/factors.html)).
+  - There are specialized helper functions for working with [strings](http://stringr.tidyverse.org) ([chapter](http://r4ds.had.co.nz/strings.html)), [dates](http://lubridate.tidyverse.org) ([chapter](http://r4ds.had.co.nz/dates-and-times.html)), and [factors](http://forcats.tidyverse.org) ([chapter](http://r4ds.had.co.nz/factors.html)). [sqldf](https://github.com/ggrothendieck/sqldf) isn't part of Tidyverse but it should be (and it's a must for SQL data).
 - [Shiny](https://shiny.rstudio.com) apps are a great way to explore your data with an interactive GUI. Building them is fairly simple once you get the hang of it.
 - [doParallel](https://cran.r-project.org/web/packages/doParallel/vignettes/gettingstartedParallel.pdf) is an incredibly simple way to use more than 1 CPU whenever you run a "for" loop.
 - Learn how to use the Foreign package to [import SAS/SPSS/Stata/Minitab/Octave files into R](http://www.statmethods.net/input/importingdata.html). [Readr](http://readr.tidyverse.org) is a great go-to for less exotic file formats, specifically any comma/tab/space delimited file ([chapter](http://r4ds.had.co.nz/data-import.html)).
@@ -82,7 +82,11 @@ __Descriptions__:
 - [Psych](http://personality-project.org/r/psych/) is a huge package with lots of statistical methods implemented. My go-to for dimension reduction (e.g. bifactor analysis) and item response theory (see [chapter](http://personality-project.org/r/psych/vignettes/overview.pdf)).
 - [rgl](https://cran.r-project.org/web/packages/rgl/vignettes/rgl.html) is my go-to for 3D plotting.
   
-### RStudio Plugins
+### RStudio Addins
+There are some additional bells and whistles that are helpful when using RStudio. A good list is available [here](https://github.com/daattali/addinslist). I like:
+- [ggthemeasssist](https://github.com/calligross/ggthemeassist) for editing ggplot themes by GUI.
+- [colourpicker](https://github.com/daattali/colourpicker) for choosing colors in plots.
+- [tidyshiny](https://github.com/MangoTheCat/tidyshiny/) provides a simple interface for tidyverse data munging that shows you what the data will look like given the selected instructions.
 
 ### R Reproducibility
 - Use the [project](http://r4ds.had.co.nz/workflow-projects.html) functionality in RStudio to keep dependencies and data sources straight.
