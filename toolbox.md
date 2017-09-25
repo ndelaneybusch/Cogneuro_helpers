@@ -96,3 +96,9 @@ There are some additional bells and whistles that are helpful when using RStudio
 Nearly all of my heavy scripting, more challenging data munging, predictive modeling, web scraping, and deep learning projects take place in python. My core python install is [Anaconda](https://www.anaconda.com/download/) for python 3.6. Then, after the install, I create an environment for python 2.7 work (this is easy to do with Anaconda navigator - go to "Environments", and at the bottom, hit "create" - or can be done by cmd with "conda create -n python27 anaconda python=2.7").
 
 I generally prefer [Spyder](https://github.com/spyder-ide/spyder) for my IDE (which ships with Anaconda) though usually also install [SublimeText](http://www.sublimetext.com) and [Notepad++](https://notepad-plus-plus.org) for quick on-the-fly edits and script viewing (respectively), plus [pycharm](https://www.jetbrains.com/pycharm/) for some particularly complicated scripting tasks (see [integration with Anaconda](https://docs.anaconda.com/anaconda/user-guide/tasks/integration/pycharm)). 
+
+### Python Packages
+Run the following in the cmd to install my recommended packages.
+```
+conda install scipy curl
+```
