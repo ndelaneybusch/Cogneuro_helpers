@@ -53,7 +53,6 @@ install.packages("ggthemes")
 install.packages("shiny")
 install.packages("doParallel")
 install.packages("foreign")
-install.packages("Reshape2")
 install.packages("doBy")
 install.packages("Hmisc")
 install.packages("caret")
@@ -74,3 +73,11 @@ __Descriptions__:
 - [Shiny](https://shiny.rstudio.com) apps are a great way to explore your data with an interactive GUI. Building them is fairly simple once you get the hang of it.
 - [doParallel](https://cran.r-project.org/web/packages/doParallel/vignettes/gettingstartedParallel.pdf) is an incredibly simple way to use more than 1 CPU whenever you run a "for" loop.
 - Learn how to use the Foreign package to [import SAS/SPSS/Stata/Minitab/Octave files into R](http://www.statmethods.net/input/importingdata.html). [Readr](http://readr.tidyverse.org) is a great go-to for less exotic file formats, specifically any comma/tab/space delimited file ([chapter](http://r4ds.had.co.nz/data-import.html)).
+- [doBy](https://cran.r-project.org/web/packages/doBy/vignettes/doBy.pdf) is my preferred way to implement group-wise functions.
+- [Hmisc](http://data.vanderbilt.edu/fh/R/Hmisc/examples.nb.html) is a handy set of helper functions that make a wide variety of tasks easier when exploring data ([reference card](http://biostat.mc.vanderbilt.edu/wiki/pub/Main/Hmisc/Hmisc-refcard.pdf)).
+  
+### RStudio Plugins
+
+### R Reproducibility
+- Use the [project](http://r4ds.had.co.nz/workflow-projects.html) functionality in RStudio to keep dependencies and data sources straight.
+- Use the [Git](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN) functionality in RStudio to make good version control habits easy.
