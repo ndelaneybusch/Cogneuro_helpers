@@ -45,4 +45,22 @@ Nearly all of my explanatory modeling and visualization, along with most of my d
 - [Sublime Text 3](https://www.sublimetext.com) plus the [Sublime Studio](https://github.com/christophsax/SublimeStudio) plugin. My go-to IDE for heavy scripting tasks. Point SublimeStudio at your Microsoft R Open install, and when you code in sublimetext (a fantastic full-featured editor), you can highlight code and hit ctrl-enter and it will send the commands to an R console window (or open a plot etc). Supports markdown, help commands, and Shiny. Uses the same R install as RStudio (so there will be no weird package incompatibilities etc).
 
 ### R packages
+Here is the code to obtain my recommended R packages:
 
+{% highlight r %}
+install.packages("devtools")
+install.packages("shiny")
+install.packages("tidyverse")
+install.packages("ggthemes")
+install.packages("doParallel")
+install.packages("foreign")
+install.packages("Reshape2")
+install.packages("doBy")
+install.packages("Hmisc")
+install.packages("caret")
+install.packages("car")
+install.packages("lmerTest")
+install.packages("itsadug")
+install.packages("rgl")
+install.packages("psych")
+{% endhighlight %}
