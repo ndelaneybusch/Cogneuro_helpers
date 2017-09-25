@@ -48,10 +48,9 @@ Nearly all of my explanatory modeling and visualization, along with most of my d
 Here is the code to obtain my recommended R packages:
 
 {% highlight r %}
-install.packages("devtools")
-install.packages("shiny")
 install.packages("tidyverse")
 install.packages("ggthemes")
+install.packages("shiny")
 install.packages("doParallel")
 install.packages("foreign")
 install.packages("Reshape2")
@@ -64,3 +63,10 @@ install.packages("itsadug")
 install.packages("rgl")
 install.packages("psych")
 {% endhighlight %}
+
+__Descriptions__:
+- [tidyverse](https://www.tidyverse.org/packages/) is a large set of packages by Hadley Wickham and colleagues to make everyday data manipulation tasks easier. I do most of my work in the tidyverse. There are a few packages in particular that come with tidyverse that deserve special mention, and are well worth learning to use effectively:
+ - [dplyr](http://dplyr.tidyverse.org) great for selecting/filtering your data and computing new variables. See book chapter [here](http://r4ds.had.co.nz/transform.html#grouped-mutates-and-filters). 
+ - [ggplot2]() is a language of visualization that you can use to build simple, beautiful graphics. I highly recommend [reading this chapter](http://r4ds.had.co.nz/data-visualisation.html). Good places to grab code include [this cookbook](http://www.cookbook-r.com/Graphs/) and [this tutorial](http://tutorials.iq.harvard.edu/R/Rgraphics/Rgraphics.html). [ggthemes](https://cran.r-project.org/web/packages/ggthemes/vignettes/ggthemes.html) is a lovely set of pre-packaged visual design property sets that you can apply to existing plots to change the way they look in coordinated ways.
+- [Shiny](https://shiny.rstudio.com) apps are a great way to explore your data with an interactive GUI. Building them is fairly simple once you get the hang of it.
+- 
