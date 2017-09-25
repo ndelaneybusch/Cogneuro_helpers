@@ -35,7 +35,7 @@ I try to follow a simple set of guidelines when approaching my workflow.
 The following recommendations will focus on Windows programs that are available for free, though I try to emphasize those that also have Linux and Mac versions.  
   
 # The Toolbox Core
-My workflow revolves around three primary languages: R, Python, and Matlab.  
+My workflow revolves around three primary languages: R, Python, and Matlab.
   
 ## R Setup
 Nearly all of my explanatory modeling and visualization, along with most of my data munging, happens in R. I recommend the following R install:
@@ -100,12 +100,14 @@ I generally prefer [Spyder](https://github.com/spyder-ide/spyder) for my IDE (wh
 ### Python Packages
 Run the following in the cmd to install my recommended packages.
 ```
-conda install scipy seaborn scikit-learn 
+conda install scipy seaborn scikit-learn keras
 pip install sklearn-pandas
 ```
 To install packages on the python27 environment that we created, enter "activate python27" (or whatever your named your 2.7 environment) in the cmd, then enter the conda or the pip install instructions.
 
 The vast majority of functionality that I'm using on a daily basis comes from [SciPy](https://scipy.org). These will ship with Anaconda, but it's worth going through each to make sure you understand the functionality.
+
+Cheatsheets for the essential packages is available [here](https://startupsventurecapital.com/essential-cheat-sheets-for-machine-learning-and-deep-learning-researchers-efb6a8ebd2e5).
 
 __Descriptions__:
 - [Numpy](https://docs.scipy.org/doc/numpy-dev/user/quickstart.html) is a better way to work with matrices (or, more precisely, n-dimensional arrays). If you are coming from MatLab land, [you will feel right at home](https://docs.scipy.org/doc/numpy-dev/user/numpy-for-matlab-users.html).
@@ -113,4 +115,4 @@ __Descriptions__:
 - [Matplotlib](http://matplotlib.org) is my go-to for python visualizations (with the [seaborn](https://seaborn.pydata.org) extras).
 - [SKlearn](http://scikit-learn.org/stable/) is my go-to for predictive modeling. [Sklearn-pandas](https://github.com/pandas-dev/sklearn-pandas) supports jumping from Pandas data frames to sklearn arrays.
 - For neural network models, I use [TensorFlow](https://www.tensorflow.org) (which now has the weight of Google behind it) with the [CUDA](https://developer.nvidia.com/cuda-zone) backend (Nvidia GPU only) and the [Keras](https://keras.io) frontend. Carefully follow the installation instructions [here](https://www.tensorflow.org/install/install_windows) and then [install the Keras python library](https://keras.io/#installation).
-
+- [Natural Language Toolkit](http://www.nltk.org) is a great resource for psycholinguists etc.
