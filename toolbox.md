@@ -1,7 +1,7 @@
 ---
 layout: page
 title: My Data Science Toolbox
-permalink: /contents/
+permalink: /toolbox/
 ---
 
 <style>
