@@ -72,4 +72,5 @@ __Descriptions__:
   - [dplyr](http://dplyr.tidyverse.org) great for selecting/filtering your data and computing new variables. See book chapter [here](http://r4ds.had.co.nz/transform.html#grouped-mutates-and-filters).
   - There are specialized helper functions for working with [strings](http://stringr.tidyverse.org) ([chapter](http://r4ds.had.co.nz/strings.html)), [dates](http://lubridate.tidyverse.org) ([chapter](http://r4ds.had.co.nz/dates-and-times.html)), and [factors](http://forcats.tidyverse.org) ([chapter](http://r4ds.had.co.nz/factors.html)).
 - [Shiny](https://shiny.rstudio.com) apps are a great way to explore your data with an interactive GUI. Building them is fairly simple once you get the hang of it.
-- 
+- [doParallel](https://cran.r-project.org/web/packages/doParallel/vignettes/gettingstartedParallel.pdf) is an incredibly simple way to use more than 1 CPU whenever you run a "for" loop.
+- Learn how to use the Foreign package to [import SAS/SPSS/Stata/Minitab/Octave files into R](http://www.statmethods.net/input/importingdata.html). [Readr](http://readr.tidyverse.org) is a great go-to for less exotic file formats, specifically any comma/tab/space delimited file ([chapter](http://r4ds.had.co.nz/data-import.html)).
