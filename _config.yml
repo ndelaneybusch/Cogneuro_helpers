@@ -219,7 +219,7 @@ prose:
           element: "checkbox"
           label: "Publish"
           help: "Check to publish post, uncheck to hide."
-		  
+
 collections:
   visualizations:
     output: true
@@ -233,7 +233,6 @@ collections:
   misc:
     output: true
     permalink: /misc/:path/
-	
 
 gems:
   - jekyll-paginate
