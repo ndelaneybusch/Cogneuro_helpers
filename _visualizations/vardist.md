@@ -33,8 +33,8 @@ plot_var_dense(df_behavioral, "RT", apply_log = TRUE)
 {% endhighlight %}
 
 __Plot 1__
-![vardist_1](/Cogneuro_helpers/img/vardist_1.tiff)  
+![vardist_1](/Cogneuro_helpers/img/vardist_1.png)  
   
   
 __Plot 2 (log transformed)__
-![vardist_2](/Cogneuro_helpers/img/vardist_2.tiff)
+![vardist_2](/Cogneuro_helpers/img/vardist_2.png)
