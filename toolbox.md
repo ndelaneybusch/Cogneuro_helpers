@@ -102,3 +102,8 @@ Run the following in the cmd to install my recommended packages.
 ```
 conda install scipy curl
 ```
+To install packages on the python27 environment that we created, enter "activate python27" (or whatever your named your 2.7 environment) in the cmd, then enter the conda or the pip install instructions.
+
+The vast majority of functionality that I'm using on a daily basis comes from [SciPy](https://scipy.org). These will ship with Anaconda, but it's worth going through each to make sure you understand the functionality.
+__Descriptions__:
+- 
