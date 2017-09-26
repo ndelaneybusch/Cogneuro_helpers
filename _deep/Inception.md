@@ -2,7 +2,7 @@
 title: Convolution shorthands and inception blocks
 ---
 # Description
-The convolution code block provides a shorthand for adding convolution->batchnormalize->ReLU layers to a Keras model. The inception block provides a shorthand for adding [inception blocks](https://arxiv.org/pdf/1409.4842.pdf) to Keras models.
+The convolution code block provides a shorthand for adding convolution->batchnormalize->ReLU layers to a Keras model. The inception block provides a shorthand for adding [inception blocks](https://arxiv.org/pdf/1409.4842.pdf) to Keras models. These are coded for channel-end input formats, but would be pretty easy to modify for channel-first formats.
 
 # Dependencies
 {% highlight python %}
