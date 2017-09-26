@@ -26,4 +26,4 @@ permalink: /contents/
 R: [Distribution plots](/Cogneuro_helpers/visualizations/vardist/) for continuous variables.
 
 # Deep Learning  
-Python/Keras: [Inception Blocks](/Cogneuro_helpers/deep/Inception/) for Keras models.
+Keras: [Inception Blocks](/Cogneuro_helpers/deep/Inception/) for Keras models.
