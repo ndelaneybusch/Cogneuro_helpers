@@ -1,0 +1,76 @@
+---
+title: Convolution shorthands and inception blocks
+---
+# Description
+The convolution code block provides a shorthand for adding convolution->batchnormalize->ReLU layers to a Keras model. The inception block provides a shorthand for adding [inception blocks](https://arxiv.org/pdf/1409.4842.pdf) to Keras models.
+
+# Dependencies
+{% highlight python %}
+from keras.models import Model
+from keras.regularizers import l2, l1
+from keras.layers import Conv2D, BatchNormalization, Activation, MaxPooling2D, Input, Concatenate
+{% endhighlight %}
+
+# Functions
+## Convolution block:
+{% highlight python %}
+def conv_block(x, nb_filter, num_row, num_col, strides=(1,1), padding='same', bias=False):
+    x = Conv2D(nb_filter, kernel_size=(num_row, num_col), strides=strides, padding=padding, kernel_regularizer=l2(0.00004), use_bias=bias)(x)
+    x = BatchNormalization(axis=-1)(x)
+    x = Activation('relu')(x)
+    return x
+{% endhighlight %}
+
+The convolution block is required for the inception blocks:
+
+## Inception block:
+{% highlight python %}
+def inception_block(x, filter_primary, filter_1by1):
+    convmin_br = conv_block(x, filter_1by1, 1, 1)
+
+    conv33_br = conv_block(x, filter_primary, 1, 1)
+    conv33_br = conv_block(conv33_br, filter_1by1, 3, 3)
+
+    conv55_br = conv_block(x, filter_primary, 1, 1)
+    conv55_br = conv_block(conv55_br, filter_1by1, 5, 5)
+
+    directpool_br = MaxPooling2D((3,3), strides=(1,1), padding='same')(x)
+    directpool_br = conv_block(directpool_br, filter_1by1, 1, 1)
+
+    x = Concatenate()([convmin_br, conv33_br, conv55_br, directpool_br])
+    return x
+{% endhighlight %}
+
+## Modern Inception block:
+From [Rethinking the Inception Architecture for Computer Vision](https://arxiv.org/pdf/1512.00567.pdf)
+{% highlight python %}
+def inceptionv2_block(x, filter_primary, filter_1by1):
+    convmin_br = conv_block(x, filter_1by1, 1, 1)
+
+    conv33_br = conv_block(x, filter_primary, 1, 1)
+    conv33_br = conv_block(conv33_br, filter_1by1, 3, 3)
+
+    conv33stack_br = conv_block(x, filter_primary, 1, 1)
+    conv33stack_br = conv_block(conv33stack_br, filter_1by1, 3, 3)
+    conv33stack_br = conv_block(conv33stack_br, filter_1by1, 3, 3)
+
+    directpool_br = MaxPooling2D((3,3), strides=(1,1), padding='same')(x)
+    directpool_br = conv_block(directpool_br, filter_1by1, 1, 1)
+
+    x = Concatenate()([convmin_br, conv33_br, conv33stack_br, directpool_br])
+    return x
+{% endhighlight %}
+
+# Function Call
+## Convolution block
+Put the previous model step (or Input) 
+{% highlight python %}
+x = conv_block(x, 32, 3, 3, strides=(2,2))
+{% endhighlight %}
+
+__Plot 1__
+![vardist_1](/Cogneuro_helpers/img/vardist_1.png)  
+  
+  
+__Plot 2 (log transformed)__
+![vardist_2](/Cogneuro_helpers/img/vardist_2.png)
