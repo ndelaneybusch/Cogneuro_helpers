@@ -7,7 +7,7 @@ The convolution code block provides a shorthand for adding convolution->batchnor
 # Dependencies
 {% highlight python %}
 from keras.models import Model
-from keras.regularizers import l2, l1
+from keras.regularizers import l2
 from keras.layers import Conv2D, BatchNormalization, Activation, MaxPooling2D, Input, Concatenate
 {% endhighlight %}
 
