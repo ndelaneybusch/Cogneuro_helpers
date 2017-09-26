@@ -28,14 +28,14 @@ The convolution block is required for the inception blocks:
 def inception_block(x, filter_primary, filter_1by1):
     convmin_br = conv_block(x, filter_1by1, 1, 1)
 
-    conv33_br = conv_block(x, filter_primary, 1, 1)
-    conv33_br = conv_block(conv33_br, filter_1by1, 3, 3)
+    conv33_br = conv_block(x, filter_1by1, 1, 1)
+    conv33_br = conv_block(conv33_br, filter_primary, 3, 3)
 
-    conv55_br = conv_block(x, filter_primary, 1, 1)
-    conv55_br = conv_block(conv55_br, filter_1by1, 5, 5)
+    conv55_br = conv_block(x, filter_1by1, 1, 1)
+    conv55_br = conv_block(conv55_br, filter_primary, 5, 5)
 
     directpool_br = MaxPooling2D((3,3), strides=(1,1), padding='same')(x)
-    directpool_br = conv_block(directpool_br, filter_1by1, 1, 1)
+    directpool_br = conv_block(directpool_br, filter_primary, 1, 1)
 
     x = Concatenate()([convmin_br, conv33_br, conv55_br, directpool_br])
     return x
@@ -47,15 +47,15 @@ From [Rethinking the Inception Architecture for Computer Vision](https://arxiv.o
 def inceptionv2_block(x, filter_primary, filter_1by1):
     convmin_br = conv_block(x, filter_1by1, 1, 1)
 
-    conv33_br = conv_block(x, filter_primary, 1, 1)
-    conv33_br = conv_block(conv33_br, filter_1by1, 3, 3)
+    conv33_br = conv_block(x, filter_1by1, 1, 1)
+    conv33_br = conv_block(conv33_br, filter_primary, 3, 3)
 
-    conv33stack_br = conv_block(x, filter_primary, 1, 1)
-    conv33stack_br = conv_block(conv33stack_br, filter_1by1, 3, 3)
-    conv33stack_br = conv_block(conv33stack_br, filter_1by1, 3, 3)
+    conv33stack_br = conv_block(x, filter_1by1, 1, 1)
+    conv33stack_br = conv_block(conv33stack_br, filter_primary, 3, 3)
+    conv33stack_br = conv_block(conv33stack_br, filter_primary, 3, 3)
 
     directpool_br = MaxPooling2D((3,3), strides=(1,1), padding='same')(x)
-    directpool_br = conv_block(directpool_br, filter_1by1, 1, 1)
+    directpool_br = conv_block(directpool_br, filter_primary, 1, 1)
 
     x = Concatenate()([convmin_br, conv33_br, conv33stack_br, directpool_br])
     return x
@@ -63,14 +63,15 @@ def inceptionv2_block(x, filter_primary, filter_1by1):
 
 # Function Call
 ## Convolution block
-Put the previous model step (or Input) 
+Put the previous model step (or Input) as the first variable. The next three describe the depth of the convolution filter and the size of the convolution kernal. Options for stride, padding, and bias.
 {% highlight python %}
 x = conv_block(x, 32, 3, 3, strides=(2,2))
 {% endhighlight %}
+The 2D convolution is followed by a batch normalization (to center and scale the weights and improve model training) and the application of a rectified linear unit activation (which supports nonlinearities while maintaining extremely nice derivatives for the training).
 
-__Plot 1__
-![vardist_1](/Cogneuro_helpers/img/vardist_1.png)  
-  
-  
-__Plot 2 (log transformed)__
-![vardist_2](/Cogneuro_helpers/img/vardist_2.png)
+## Inception blocks:
+The convolutions in an inception block are all pre-specified, so just specify the previous layer and the depths (the "primary" filter sets the depth of the  1x1 convolutions, while the "
+x = inception_block(x, 64, 96)
+{% highlight python %}
+x = conv_block(x, 32, 3, 3, strides=(2,2))
+{% endhighlight %}
