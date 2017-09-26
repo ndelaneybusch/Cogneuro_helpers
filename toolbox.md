@@ -100,7 +100,7 @@ I generally prefer [Spyder](https://github.com/spyder-ide/spyder) for my IDE (wh
 ### Python Packages
 Run the following in the cmd to install my recommended packages.
 ```
-conda install scipy seaborn scikit-learn keras
+conda install scipy seaborn scikit-learn
 pip install sklearn-pandas
 ```
 To install packages on the python27 environment that we created, enter "activate python27" (or whatever your named your 2.7 environment) in the cmd, then enter the conda or the pip install instructions.
