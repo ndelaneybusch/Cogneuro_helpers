@@ -78,4 +78,4 @@ x = inceptionv2_block(x, 64, 96)
 The inception block implements convolution blocks over different scales (1x1, 3x3, 5x5, and pooled), and then concatenates them depthwise. They are a simple and computationally cheap but highly effective way of improving image classification.
 
 Here is a more detailed schematic of the full modern inception block, from tensorboard:
-![inceptionblock_tensorboard](/Cogneuro_helpers/img/inceptionblock_tensorboard.png)
+[![inceptionblock_tensorboard](/Cogneuro_helpers/img/inceptionblock_tensorboard.png)](/Cogneuro_helpers/img/inceptionblock_tensorboard.png)
