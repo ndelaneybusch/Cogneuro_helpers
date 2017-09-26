@@ -23,7 +23,7 @@ description: Scripts, functions, examples, and tutorials for cognitive neuroscie
 
 # List of links in the navigation bar
 navbar-links:
-  Home: "index"
+  Contents: "contents"
   My Setup: "toolbox"
   Readings: "readings"
   About Me: "about"
