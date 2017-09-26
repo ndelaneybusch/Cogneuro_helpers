@@ -25,7 +25,7 @@ The convolution block is required for the inception blocks:
 
 ## Inception block:
 {% highlight python %}
-def inception_block(x, filter_primary, filter_1by1):
+def inception_block(x, filter_1by1, filter_primary):
     convmin_br = conv_block(x, filter_1by1, 1, 1)
 
     conv33_br = conv_block(x, filter_1by1, 1, 1)
@@ -44,7 +44,7 @@ def inception_block(x, filter_primary, filter_1by1):
 ## Modern Inception block:
 From [Rethinking the Inception Architecture for Computer Vision](https://arxiv.org/pdf/1512.00567.pdf)
 {% highlight python %}
-def inceptionv2_block(x, filter_primary, filter_1by1):
+def inceptionv2_block(x, filter_1by1, filter_primary):
     convmin_br = conv_block(x, filter_1by1, 1, 1)
 
     conv33_br = conv_block(x, filter_1by1, 1, 1)
@@ -70,8 +70,9 @@ x = conv_block(x, 32, 3, 3, strides=(2,2))
 The 2D convolution is followed by a batch normalization (to center and scale the weights and improve model training) and the application of a rectified linear unit activation (which supports nonlinearities while maintaining extremely nice derivatives for the training).
 
 ## Inception blocks:
-The convolutions in an inception block are all pre-specified, so just specify the previous layer and the depths (the "primary" filter sets the depth of the  1x1 convolutions, while the "
-x = inception_block(x, 64, 96)
+The convolutions in an inception block are all pre-specified, so just specify the previous layer and the depths (the "1by1" filter sets the depths of all of the initial 1x1 convolution layers, while the "primary" filter sets the target depths that will be concatenated).
 {% highlight python %}
-x = conv_block(x, 32, 3, 3, strides=(2,2))
+x = inception_block(x, 64, 96)
+x = inceptionv2_block(x, 64, 96)
 {% endhighlight %}
+The inception block implements convolution blocks over different scales (1x1, 3x3, 5x5, and pooled), and then concatenates them depthwise. They are a simple and computationally cheap but highly effective way of improving image classification.
