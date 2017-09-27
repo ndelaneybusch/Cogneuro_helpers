@@ -120,3 +120,7 @@ sensitivity: [ 0.972  0.977  0.975  0.985  0.975  0.977  0.983  0.97   0.96   0.
 specificity: [ 0.999   0.9976  0.9978  0.9954  0.9967  0.9981  0.9973  0.9992  0.9959
   0.9953]
 </pre>
+
+This single inception-block model brings us all the way down to ~2.5% misclassification. It looks like the primary problem is confusing "i" and "j" with one another (see bottom-right of confusion matrix), and some conservative labeling with "a" and "h" cases (sensitivity is lower than the others, but specificity is higher). The former would be pretty easy to address by building a very small secondary model specifically to address cases where this one thinks that both "i" and "j" are reasonably probable (to focus training demands on the discriminating features of the case), the latter might be addressable by either weighting "a" and "h" cases a bit and/or synthesizing new training cases with more variable features (to try to encourage more robust generalization for those letters).  
+
+In all, it's a pretty good performance for some educated guesses, half an hour of training, and only 1.5 million parameters. 
