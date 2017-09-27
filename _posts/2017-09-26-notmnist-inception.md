@@ -1,5 +1,6 @@
 ---
 layout: post
-title: Test markdown
-subtitle: Each post also has a subtitle
+title: notMNIST Inception
+subtitle: Classifying letters with an inception model
 ---
+
