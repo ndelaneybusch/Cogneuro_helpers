@@ -49,7 +49,8 @@ def inception_block(x, filter_1by1, filter_primary):
 {% endhighlight %}
 
 ## Modern Inception block:
-From [Rethinking the Inception Architecture for Computer Vision](https://arxiv.org/pdf/1512.00567.pdf)
+See discussion in [Rethinking the Inception Architecture for Computer Vision](https://arxiv.org/pdf/1512.00567.pdf). This stacks two 3x3 convolution layers to replace the 5x5 layer, adding depth to the inception block.
+
 {% highlight python %}
 def inceptionv2_block(x, filter_1by1, filter_primary):
     convmin_br = conv_block(x, filter_1by1, 1, 1)
