@@ -5,14 +5,14 @@ title: Informative Classification Reports
 This function takes a classifier's predicted labels and the actual labels and returns a useful report of classification metrics. Accepts label identities, one-hot encoding class arrays, or class probabilities, and returns the same metrics regardless of input format (no munging required). Output includes !) a confusion matrix (with an "expand" option to prevent wrapping when printing to console), totals for false positivies and false negatives, B) a table of precision/recall/F1 values, C) accuracy and cohen's kappa value, and D) sensitivity and specificity. 
 
 # Dependencies  
-{% highlight python %}
+{% highlight Python %}
 import numpy as np
 import pandas as pd
 from sklearn import metrics
 {% endhighlight %}
 
 # Function  
-{% highlight python %}
+{% highlight Python %}
 def my_classification_report(test_predictions, test_labels, expand=True):
     if len(test_predictions[0].shape)==1:
         c = b.argmax(axis=-1)
@@ -47,7 +47,7 @@ def my_classification_report(test_predictions, test_labels, expand=True):
 {% endhighlight %}
 
 # Function Call  
-{% highlight python %}
+{% highlight Python %}
 my_classification_report(test_predictions, test_labels) #automaticall expands tables to prevent wrapping
 my_classification_report(test_predictions, test_labels, expand=False) #wraps tables if they are too long
 {% endhighlight %}
