@@ -4,14 +4,14 @@ title: Informative Classification Reports
 # Description
 This function takes a classifier's predicted labels and the actual labels and returns a useful report of classification metrics. Accepts label identities, one-hot encoding class arrays, or class probabilities, and returns the same metrics regardless of input format (no munging required). Output includes !) a confusion matrix (with an "expand" option to prevent wrapping when printing to console), totals for false positivies and false negatives, B) a table of precision/recall/F1 values, C) accuracy and cohen's kappa value, and D) sensitivity and specificity. 
 
-# Dependencies
+# Dependencies  
 {% highlight python %}
 import numpy as np
 import pandas as pd
 from sklearn import metrics
 {% endhighlight %}
 
-# Function
+# Function  
 {% highlight python %}
 def my_classification_report(test_predictions, test_labels, expand=True):
     if len(test_predictions[0].shape)==1:
@@ -46,13 +46,13 @@ def my_classification_report(test_predictions, test_labels, expand=True):
     return
 {% endhighlight %}
 
-# Function Call
+# Function Call  
 {% highlight python %}
 my_classification_report(test_predictions, test_labels) #automaticall expands tables to prevent wrapping
 my_classification_report(test_predictions, test_labels, expand=False) #wraps tables if they are too long
 {% endhighlight %}
 
-__Sample output:__
+__Sample output:__  
 From a quick classifier on the <a href='https://ndelaneybusch.github.io/Cogneuro_helpers/2017-09-26-notmnist-inception/'>notMNIST</a> 10-class problem.
 <pre>
 Confusion Matrix (predicted across columns, actual down rows)
