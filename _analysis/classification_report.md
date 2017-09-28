@@ -12,7 +12,7 @@ from sklearn import metrics
 '''python
 
 # Function  
-{% highlight Python %}
+'''python
 def my_classification_report(test_predictions, test_labels, expand=True):
     if len(test_predictions[0].shape)==1:
         c = b.argmax(axis=-1)
@@ -44,7 +44,7 @@ def my_classification_report(test_predictions, test_labels, expand=True):
     print("specificity: "+str((TN/(TN+FP)).round(4))) #specificity
     pd.reset_option('expand_frame_repr')
     return
-{% endhighlight %}
+'''
 
 # Function Call  
 {% highlight Python %}
