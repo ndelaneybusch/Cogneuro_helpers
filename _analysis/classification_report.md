@@ -9,7 +9,7 @@ This function takes a classifier's predicted labels and the actual labels and re
 import numpy as np
 import pandas as pd
 from sklearn import metrics
-'''python
+'''
 
 # Function  
 '''python
