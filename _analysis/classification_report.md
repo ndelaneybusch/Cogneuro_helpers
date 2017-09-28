@@ -47,10 +47,10 @@ def my_classification_report(test_predictions, test_labels, expand=True):
 ```
 
 # Function Call  
-{% highlight Python %}
+```python
 my_classification_report(test_predictions, test_labels) #automaticall expands tables to prevent wrapping
 my_classification_report(test_predictions, test_labels, expand=False) #wraps tables if they are too long
-{% endhighlight %}
+```
 
 __Sample output:__  
 From a quick classifier on the <a href='https://ndelaneybusch.github.io/Cogneuro_helpers/2017-09-26-notmnist-inception/'>notMNIST</a> 10-class problem.
